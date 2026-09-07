@@ -1,0 +1,200 @@
+body {
+    background-color: #1a0202;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background: linear-gradient(145deg, #8b0000, #ff4500);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px #ffcc00;
+    text-align: center;
+    width: 320px;
+    border: 4px solid #ffcc00;
+}
+
+h1 {
+    color: #ffcc00;
+    margin-top: 0;
+    text-shadow: 2px 2px #000;
+    font-size: 28px;
+}
+
+.painel-saldo {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ffcc00;
+}
+
+.slots {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 4px solid #333;
+    margin-bottom: 20px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 4px solid #333;
+    margin-bottom: 20px;
+}
+
+.slot {
+    font-size: 40px;
+    /* Diminuído um pouco para caber os 9 na tela */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.girando {
+    animation: balanco 0.1s infinite;
+}
+
+@keyframes balanco {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+button {
+    background: linear-gradient(#ffcc00, #ff9900);
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px #cc7a00;
+    width: 100%;
+    transition: 0.1s;
+}
+
+button:active {
+    box-shadow: 0 2px #cc7a00;
+    transform: translateY(3px);
+}
+
+button:disabled {
+    background: #666;
+    box-shadow: none;
+    cursor: not-allowed;
+    color: #999;
+}
+
+.mensagem {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 30px;
+    text-shadow: 1px 1px #000;
+}
+
+.sucesso {
+    color: #00ff00;
+}
+
+.erro {
+    color: #ff3333;
+}
+
+.aviso {
+    color: #ffcc00;
+}
+
+/* Estilo do Botão Turbo */
+#btn-turbo {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Estilo do Botão de Apostas */
+#btn-apostas {
+    background-color: #444444;
+    color: #ffcc00;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* adicionei o restante do valor que estava lá */
+}
+
+/* Container que segura os dois botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os botões na tela */
+    gap: 10px;
+    /* Dá um espaço entre um botão e outro */
+    margin-bottom: 20px;
+    /* Afasta os botões dos slots de baixo */
+    width: 100%;
+    /* Garante que use a largura total disponível */
+}
+
+/* Estilo padrão para ambos os botões ficarem iguais */
+#btn-turbo,
+#btn-apostas {
+    flex: 1;
+    /* Faz os dois botões terem exatamente o mesmo tamanho */
+    max-width: 120px;
+    /* Define um limite de largura para não ficarem gigantes */
+    padding: 10px;
+    /* Espaçamento interno para o texto não ficar espremido */
+    font-size: 14px;
+    /* Tamanho da fonte igual para ambos */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    border: none;
+    /* Remove a borda padrão do navegador */
+    border-radius: 8px;
+    /* Deixa as pontas arredondadas bonitas */
+    cursor: pointer;
+    /* Muda o cursor para a mãozinha ao passar o mouse */
+}
+
+/* Cor específica do Botão Turbo */
+#btn-turbo {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Cor específica do Botão de Apostas */
+#btn-aposta {
+    background-color: #444444;
+    color: #ffcc00;
+}
