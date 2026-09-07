@@ -198,3 +198,19 @@ button:disabled {
     background-color: #444444;
     color: #ffcc00;
 }
+/* Classe que o JavaScript vai colocar nos slots para fazê-los girar */
+.girando {
+    animation: rodarEmoji 0.4s ease-in-out infinite;
+}
+
+/* Configuração do movimento de rotação */
+@keyframes rodarEmoji {
+    0% {
+        transform: rotateX(0deg);
+        filter: blur(1px); /* Efeito de desfoque de movimento */
+    }
+    100% {
+        transform: rotateX(360deg);
+        filter: blur(0px);
+    }
+}
