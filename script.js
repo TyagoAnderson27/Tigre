@@ -183,6 +183,12 @@ function jogar() {
     }
 
     setTimeout(() => {
+        // Remove a animação para os emojis pararem de girar antes de mostrar o resultado
+        for (let i = 1; i <= 9; i++) {
+            const slot = document.getElementById(`slot${i}`);
+            if (slot) slot.classList.remove('girando');
+        }
+
         let resultados = [];
 
         // Chance configurada em 10% para forçar a Tela Cheia (9 iguais)
